@@ -1,0 +1,9 @@
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: 'devops-task-api'
+    static_configs:
+      # If running Prometheus in Docker locally, use host.docker.internal
+      # If in Kubernetes, use the service name or IP
+      - targets: ['host.docker.internal:5000'] 
